@@ -1,0 +1,19 @@
+body {
+    background: url(../../images/restaurant.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-color: rgb(239, 195, 142);
+}
+
+.search-box {
+    position: relative;
+}
+
+.search-btn {
+    position: absolute;
+    top: 0;
+    right: 0;
+    /* height: 100%; */
+}
