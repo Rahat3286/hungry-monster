@@ -2,6 +2,10 @@
     box-sizing: border-box;
 }
 
+a{
+    text-decoration: none;
+}
+
 .brand-name {
     font-size: 0.9rem;
     font-weight: bold;
