@@ -1,4 +1,8 @@
-#brand-name {
+*{
+    box-sizing: border-box;
+}
+
+.brand-name {
     font-size: 0.9rem;
     font-weight: bold;
     color: rgb(255, 255, 255);
