@@ -6,7 +6,6 @@ const searchFoods = () => {
     fetch(url)
         .then(res => res.json())
         .then(data => displayfoods(data.meals))
-        // .then(data => console.log(data.meals))
         .catch(error => displayError("Your Search Result didn't match !!!"));
 }
 
@@ -17,8 +16,10 @@ const displayfoods = foods => {
         const foodDiv = document.createElement('div');
         foodDiv.className = 'd-flex justify-content-center mb-4 col-md-3';
         foodDiv.innerHTML = `
-                <div class="card text-center" style="width: 20rem; cursor:pointer">
-                    <img src="${food.strMealThumb}" class="card-img-top img-fluid" alt="..." style="transform:scale(1)">
+                <div class="card text-center" style="width: 22rem; cursor:pointer">
+                    <div style="overflow:hidden; transition: all 1.5s ease">
+                        <img src="${food.strMealThumb}" class="card-img-top img-fluid" alt="..." style="transform:scale(1)">
+                    </div>
                     <div class="card-body">
                         <p class="card-title align-items-center" style="font-weight: bold">${food.strMeal}</p>
                     </div>
@@ -33,10 +34,10 @@ const displayfoods = foods => {
 const displayError = error => {
     const errorTag = document.getElementById('error-message');
     errorTag.innerText = error;
-    if(error){
+    if (error) {
         errorTag.classList.remove('d-none');
     }
-    else{
+    else {
         errorTag.classList.add('d-none');
     }
     toggleSpinner(false);
@@ -44,11 +45,15 @@ const displayError = error => {
 
 const toggleSpinner = (show) => {
     const spinner = document.getElementById('loading-spinner');
-    if(show){
+    if (show) {
         spinner.classList.remove('d-none');
     }
-    else{
+    else {
         spinner.classList.add('d-none');
     }
-
 }
+
+// const foodIngredients = (meal)=>{
+//     meal = meal[0];
+//     const 
+// }

@@ -13,7 +13,7 @@ a{
 }
 
 body {
-    background: url(../../images/restaurant.jpg);
+    background: url("./images/restaurant.jpg");
     background-position: center center;
     background-repeat: no-repeat;
     background-attachment: fixed;

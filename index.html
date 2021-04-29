@@ -6,78 +6,86 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="./css/bootstrap.min.css">
         <link rel="shortcut icon" href="/hungry monster favicon.ico" type="">
+        <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css">
         <link rel="stylesheet" href="./style.css">
         <title>Hungry Monster</title>
     </head>
     <body>
         <div class="container">
             <!-- navbar -->
-            </nav>
-            <nav class="navbar navbar-expand-lg navbar-light bg-transparent">
-                <div class="container-fluid">
-                    <a class="navbar-brand" href="#">
-                        <img
-                            src="./images/hungry monster brand icon and logo.jpg"
-                            width="30"
-                            height="30"
-                            class="d-inline-block align-text-top"
-                            alt="Brand-Image"
-                        >
-                        <span class="brand-name">Hungry Monster</span>
-                    </a>
-                    <button
-                        class="navbar-toggler"
-                        type="button"
-                        data-bs-toggle="collapse"
-                        data-bs-target="#navbarNav"
-                        aria-controls="navbarNav"
-                        aria-expanded="false"
-                        aria-label="Toggle navigation"
+        </nav>
+        <nav class="navbar navbar-expand-lg navbar-light bg-transparent">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">
+                    <img
+                        src="./images/hungry monster brand icon and logo.jpg"
+                        width="30"
+                        height="30"
+                        class="d-inline-block align-text-top"
+                        alt="Brand-Image"
                     >
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-                    <div class="collapse navbar-collapse" id="navbarNav">
-                        <ul class="navbar-nav ms-auto text-center">
-                            <li class="nav-item">
-                                <a class="nav-link route-name" aria-current="page" href="#">Home</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link route-name" href="#">About</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link route-name" href="#">Reciepes</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link route-name" href="#">Blog</a>
-                            </li>
-                        </ul>
-                    </div>
+                    <span class="brand-name">Hungry Monster</span>
+                </a>
+                <button
+                    class="navbar-toggler"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#navbarNav"
+                    aria-controls="navbarNav"
+                    aria-expanded="false"
+                    aria-label="Toggle navigation"
+                >
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto text-center">
+                        <li class="nav-item">
+                            <a class="nav-link route-name" aria-current="page" href="#">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link route-name" href="#">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link route-name" href="#">Reciepes</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link route-name" href="#">Blog</a>
+                        </li>
+                    </ul>
                 </div>
-            </nav>
-            <!-- navbar -->
-            <!-- content area -->
-            <main class="content-area">
-                <div class="search-bar col-md-6 mx-auto">
-                    <div class="search-box my-5">
-                        <input
-                            id="search-field"
-                            class="form-control"
-                            placeholder="Enter the first letter of your desired food"
-                            type="text"
-                        >
-                        <button onclick="searchFoods()" class="btn btn-success search-btn">Search</button>
-                    </div>
+            </div>
+        </nav>
+        <!-- navbar -->
+        <!-- content area -->
+        <main class="content-area">
+            <div class="search-bar col-md-6 mx-auto">
+                <div class="search-box my-5">
+                    <input
+                        id="search-field"
+                        class="form-control"
+                        placeholder="Enter the first letter of your desired food"
+                        type="text"
+                    >
+                    <button onclick="searchFoods()" class="btn btn-success search-btn">Search</button>
                 </div>
-                <div id="loading-spinner" class="d-flex justify-content-center align-items-center d-none mb-5">
-                    <div class="spinner-border text-info" role="status">
-                        <span class="visually-hidden">Loading...</span>
-                    </div>
+            </div>
+            <div id="loading-spinner" class="d-flex justify-content-center align-items-center d-none mb-5">
+                <div class="spinner-border text-info" role="status">
+                    <span class="visually-hidden">Loading...</span>
                 </div>
-                <h3 id="error-message" class="text-danger text-center d-none mb-3"></h3>
-                <div id="food-container" class="search-result row"></div>
-            </main>
-            <div>
-                <script src="./app.js"></script>
-                <script src="./js/bootstrap.min.js"></script>
-            </body>
-        </html>
+            </div>
+            <h3 id="error-message" class="text-danger text-center d-none mb-3"></h3>
+            <div id="food-container" class="search-result row"  data-aos="slide-up">
+                
+            </div>
+        </main>
+    </div>
+    <div>
+        <script src="./app.js"></script>
+        <script src="./js/bootstrap.min.js"></script>
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+        <script>
+            AOS.init();
+        </script>
+    </body>
+</html>
