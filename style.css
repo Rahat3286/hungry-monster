@@ -45,3 +45,14 @@ body {
     color: black;
     cursor: pointer;
 }
+
+.food-cards{
+    transition-duration: 0.3s;
+    transition-property: all;
+    transition-timing-function: ease-in-out;
+}
+
+.food-cards:hover{
+    transform: translateY(-6px);
+    box-shadow: 1px 1px 20px -10px rgb(255, 255, 255);
+}

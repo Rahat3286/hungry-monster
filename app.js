@@ -16,8 +16,8 @@ const displayfoods = foods => {
         const foodDiv = document.createElement('div');
         foodDiv.className = 'd-flex justify-content-center mb-4 col-md-4';
         foodDiv.innerHTML = `
-                <div class="card text-center" style="width: 25rem; cursor:pointer">
-                    <div style="overflow:hidden; transition: all 1.5s ease">
+                <div class="card text-center food-cards" style="width: 25rem; cursor:pointer" >
+                    <div>
                         <img src="${food.strMealThumb}" class="card-img-top img-fluid" alt="..." style="transform:scale(1)">
                     </div>
                     <div class="card-body">
@@ -54,9 +54,9 @@ const toggleSpinner = (show) => {
 }
 
 const input = document.getElementById("search-field");
-    input.addEventListener("keypress", function (event) {
-        if (event.keyCode === 13) {
-            event.preventDefault();
-            document.getElementById("searchFoodButton").click();
-        }
-    });
+input.addEventListener("keypress", function (event) {
+    if (event.keyCode === 13) {
+        event.preventDefault();
+        document.getElementById("searchFoodButton").click();
+    }
+});
