@@ -53,10 +53,10 @@ const toggleSpinner = (show) => {
     }
 }
 
-document.getElementById("search-field")
-    .addEventListener("keypress",function(event){
-        if(event.key === 'Enter'){
-            document.getElementById("searchFood").click();
+const input = document.getElementById("search-field");
+    input.addEventListener("keypress", function (event) {
+        if (event.keyCode === 13) {
+            event.preventDefault();
+            document.getElementById("searchFoodButton").click();
         }
-    
-});
+    });
