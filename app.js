@@ -14,9 +14,9 @@ const displayfoods = foods => {
     foodContainer.innerHTML = '';
     foods.forEach(food => {
         const foodDiv = document.createElement('div');
-        foodDiv.className = 'd-flex justify-content-center mb-4 col-md-3';
+        foodDiv.className = 'd-flex justify-content-center mb-4 col-md-4';
         foodDiv.innerHTML = `
-                <div class="card text-center" style="width: 22rem; cursor:pointer">
+                <div class="card text-center" style="width: 25rem; cursor:pointer">
                     <div style="overflow:hidden; transition: all 1.5s ease">
                         <img src="${food.strMealThumb}" class="card-img-top img-fluid" alt="..." style="transform:scale(1)">
                     </div>
