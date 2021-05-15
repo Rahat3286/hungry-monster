@@ -53,7 +53,10 @@ const toggleSpinner = (show) => {
     }
 }
 
-// const foodIngredients = (meal)=>{
-//     meal = meal[0];
-//     const 
-// }
+document.getElementById("search-field")
+    .addEventListener("keypress",function(event){
+        if(event.key === 'Enter'){
+            document.getElementById("searchFood").click();
+        }
+    
+});
