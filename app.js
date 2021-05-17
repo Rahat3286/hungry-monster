@@ -1,6 +1,7 @@
 const searchFoods = () => {
-    const searchText = document.getElementById('search-field').value;
+    const searchText = document.getElementById('search-field').value.trim();
     const url = `https://www.themealdb.com/api/json/v1/1/search.php?f=${searchText}`;
+    displayfoods(false);
     toggleSpinner(true);
     toggleSpinner(true);
     fetch(url)
@@ -12,23 +13,24 @@ const searchFoods = () => {
 const displayfoods = foods => {
     const foodContainer = document.getElementById('food-container');
     foodContainer.innerHTML = '';
-    foods.forEach(food => {
-        const foodDiv = document.createElement('div');
-        foodDiv.className = 'd-flex justify-content-center mb-4 col-md-4';
-        foodDiv.innerHTML = `
-                <div class="card text-center food-cards" style="width: 25rem; cursor:pointer" >
-                    <div>
-                        <img src="${food.strMealThumb}" class="card-img-top img-fluid" alt="..." style="transform:scale(1)">
-                    </div>
-                    <div class="card-body">
-                        <p class="card-title align-items-center" style="font-weight: bold">${food.strMeal}</p>
-                    </div>
-                </div>      
-        `;
-        foodContainer.appendChild(foodDiv);
-        toggleSpinner(false);
+    if(foods){
+        foods.forEach(food => {
+            const foodDiv = document.createElement('div');
+            foodDiv.className = 'd-flex justify-content-center mb-4 col-lg-3';
+            foodDiv.innerHTML = `
+                    <div class="card text-center food-cards">
+                        <img src="${food.strMealThumb}" class="card-img-top img-fluid" alt="Food Image">
+                        <div class="card-body">
+                            <p class="card-title text-center">${food.strMeal}</p>
+                        </div>
+                    </div>      
+            `;
+            foodContainer.appendChild(foodDiv);
+        })
+    }else{
         displayError(false);
-    })
+    }
+    toggleSpinner(false);
 }
 
 const displayError = error => {
