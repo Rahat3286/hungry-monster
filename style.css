@@ -71,3 +71,23 @@ body {
     transform: translateY(-6px);
     box-shadow: 1px 1px 20px -10px rgb(255, 255, 255);
 }
+
+.food-ingredients{
+    position: fixed;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color:#fff;
+    background: orange;
+    border-radius: 1rem;
+    width: 40%;
+    height: 80%;
+    display: none;
+    padding: 2rem 0;
+}
+
+.btn-close{
+    position: absolute;
+    right: 1rem;
+    top: 1rem;
+}
